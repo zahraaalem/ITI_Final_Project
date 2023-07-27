@@ -12,14 +12,14 @@ import 'package:iti_final_project/screens/login.dart';
 class onBoarding extends StatelessWidget {
   final List<Introduction> list = [
     Introduction(
-      title: 'Rent & Buy',
-      subTitle: 'Discover, rent, and own movies anywhere now',
-      imageUrl: 'assets/images/rent_buy.jpg',
+      title: 'Buy from Brands',
+      subTitle: 'Discover, buy your favorite brands anywhere now',
+      imageUrl: 'assets/images/onboarding1.jpg',
     ),
     Introduction(
-      title: 'Enjoy Movies',
-      subTitle: 'Indulge in movies anytime, anywhere with our app',
-      imageUrl: 'assets/images/enjoy_watching.jpg',
+      title: 'Enjoy Shopping',
+      subTitle: 'Indulge in the latest fashion trends anywhere ',
+      imageUrl: 'assets/images/finish2.jpg',
     ),
     Introduction(
       title: 'Finish',
