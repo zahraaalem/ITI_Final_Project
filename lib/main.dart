@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iti_final_project/screens/colors.dart';
 import 'package:iti_final_project/screens/login.dart';
 import 'package:iti_final_project/screens/on_boarding.dart';
+import 'package:iti_final_project/screens/on_boarding_2.dart';
 import 'package:iti_final_project/screens/sign_up.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: mycolor,
       ),
-      home: onBoarding(),
+      home: onBoarding2(),
     );
   }
 }
