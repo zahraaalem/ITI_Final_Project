@@ -1,4 +1,4 @@
-# iti_final_project
+# ecommerce
 
 A new Flutter project.
 
