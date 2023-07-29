@@ -25,3 +25,8 @@ const kAddress = 'Address';
 const kProductQuantity = 'Quantity';
 const kKeepMeLoggedIn = 'KeepMeLoggedIn';
 //images/t-shirts/t-shirt1.jpg
+
+void navigateTo(context , widget) =>  Navigator.push(
+  context,
+  MaterialPageRoute(builder:(context)=> widget ,
+  ),);

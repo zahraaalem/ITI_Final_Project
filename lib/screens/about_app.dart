@@ -36,67 +36,51 @@ class _AboutAppState extends State<AboutApp> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Column(
+      body: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
               children: [
                 Container(
-                  color: Colors.white,
-                  child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.1,
+                  decoration: BoxDecoration(
+                      color: Color(0xfffee8dc),
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child:  Column(
+                      children: [
+                        Text(
+                          "Welcome to our revolutionary e-commerce clothes app, where fashion meets convenience. Discover an unparalleled shopping experience as you navigate through a vast array of clothing categories, tailored to suit your unique style and preferences. Effortlessly add any desired products to your cart with just a tap, and enjoy a seamless checkout process. Once you've received your purchases, unleash your inner critic by rating and reviewing them, helping fellow shoppers make informed decisions. Your feedback is invaluable to us; it enables our app to constantly evolve and deliver personalized fashion recommendations that resonate with your tastes. Embark on a fashion-forward journey with us today!",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        // SizedBox(height: 20,),
+                        // Text(
+                        //   'Where there is : ',
+                        //   style: TextStyle(
+                        //     fontSize: 25.0,
+                        //     color: Colors.white,
+                        //   ),
+                        // ),
+                        // SizedBox(height: 20,),
+                        // Text(
+                        //   'Our app content on many of screen:',
+                        //   style: TextStyle(
+                        //     fontSize: 20.0,
+                        //     color: Colors.white,
+                        //   ),
+                        // ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.9,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(50.0),
-                          topRight: Radius.circular(50.0)),
-                      color: Color(0xfffee8dc)),
-                )
               ],
             ),
-            Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SingleChildScrollView(
-                    child: Column(
-                  children: [
-                    Text(
-                      'The app has many features which are listed as the following :',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    ListView.builder(
-                      itemCount: features.length,
-                      itemBuilder: (context, index){
-
-                        return ListTile(
-                          leading: Container(
-                            width:10,
-                            height: 10,
-                            child: ClipOval(
-                              child: Image.asset(features[index].image)
-                            ),
-                          ),
-                          title: Text(features[index].title),
-                          subtitle: Text(features[index].desc),
-                        );
-                      },
-
-                    )
-
-                  ],
-                )),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

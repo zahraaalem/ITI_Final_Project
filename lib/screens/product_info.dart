@@ -82,98 +82,100 @@ class _ProductInfoState extends State<ProductInfo> {
                         padding: const EdgeInsets.all(8.0),
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "${product.pName}",
-                                  style: TextStyle(
-                                      fontSize:25 , fontWeight: FontWeight.bold,color: Colors.black),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                //Text("${product.pPrice}",style: TextStyle(fontSize: 10,fontWeight: FontWeight.w900),),
-                                Text(
-                                  "${product.pDescription}",
-                                  style: TextStyle(
-                                      fontSize: 23, fontWeight: FontWeight.bold,
-                                      color: Colors.black),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "${product.pPrice} \$",
-                                      style: TextStyle(
-                                          fontSize: 21,
-                                          fontWeight: FontWeight.w900,color: Colors.black),
-                                    ),
-                                    // Text(
-                                    //   "\$",
-                                    //   style: TextStyle(
-                                    //       fontSize: 20,
-                                    //       fontWeight: FontWeight.w900),
-                                    // ),
-                                  ],
-                                ),
-                                SizedBox(height: 30,),
-                                Container(
-                                  color: Colors.white,
-                                  child: Row(
+                          child: SingleChildScrollView(
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "${product.pName}",
+                                    style: const TextStyle(
+                                        fontSize:25 , fontWeight: FontWeight.bold,color: Colors.black),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  //Text("${product.pPrice}",style: TextStyle(fontSize: 10,fontWeight: FontWeight.w900),),
+                                  Text(
+                                    "${product.pDescription}",
+                                    style: const TextStyle(
+                                        fontSize: 23, fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      ClipOval(
-                                        child: Material(
-                                          color: basiccolor,
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              setState(() {
-                                                quantity++;
-                                              });
-                                            },
-                                            child: SizedBox(
-                                              width: 28,
-                                              height: 28,
-                                              child: Icon(Icons.add),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-
-                                      SizedBox(width: 10,),
                                       Text(
-                                        "${quantity.toString()}",
-                                        style: TextStyle(fontSize: 50,color: Colors.black),
+                                        "${product.pPrice} \$",
+                                        style: const TextStyle(
+                                            fontSize: 21,
+                                            fontWeight: FontWeight.w900,color: Colors.black),
                                       ),
-                                      SizedBox(width: 10,),
-
-                                      ClipOval(
-                                        child: Material(
-                                          color: basiccolor,
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              if (quantity > 0) {
-                                                setState(() {
-                                                  quantity--;
-                                                });
-                                              }
-                                            },
-                                            child: SizedBox(
-                                              width: 28,
-                                              height: 28,
-                                              child: Icon(Icons.remove),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
+                                      // Text(
+                                      //   "\$",
+                                      //   style: TextStyle(
+                                      //       fontSize: 20,
+                                      //       fontWeight: FontWeight.w900),
+                                      // ),
                                     ],
                                   ),
-                                )
-                              ]),
+                                  const SizedBox(height: 30,),
+                                  Container(
+                                    color: Colors.white,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        ClipOval(
+                                          child: Material(
+                                            color: basiccolor,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                setState(() {
+                                                  quantity++;
+                                                });
+                                              },
+                                              child: SizedBox(
+                                                width: 28,
+                                                height: 28,
+                                                child: Icon(Icons.add),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+
+                                        SizedBox(width: 10,),
+                                        Text(
+                                          "${quantity.toString()}",
+                                          style: TextStyle(fontSize: 50,color: Colors.black),
+                                        ),
+                                        SizedBox(width: 10,),
+
+                                        ClipOval(
+                                          child: Material(
+                                            color: basiccolor,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                if (quantity > 0) {
+                                                  setState(() {
+                                                    quantity--;
+                                                  });
+                                                }
+                                              },
+                                              child: SizedBox(
+                                                width: 28,
+                                                height: 28,
+                                                child: Icon(Icons.remove),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ]),
+                          ),
                         ),
                       ),
                     ),

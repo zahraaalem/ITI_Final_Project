@@ -14,10 +14,16 @@
 import 'dart:io';
 
 import 'package:ecommerce/constants.dart';
+import 'package:ecommerce/screens/about_app.dart';
+import 'package:ecommerce/screens/developers.dart';
+import 'package:ecommerce/screens/home_page.dart';
+import 'package:ecommerce/screens/login.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'carausel.dart';
 
 class MyDrawer extends StatefulWidget {
   @override
@@ -102,24 +108,36 @@ File? _image;
               ],
             ),
             ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Home"),
-              onTap: () {},
+              leading: const Icon(Icons.home),
+              title: const Text("Home"),
+              onTap: ()
+              {
+                navigateTo(context, Carousel());
+              },
             ),
             ListTile(
-              leading: Icon(Icons.account_box),
-              title: Text("About"),
-              onTap: () {},
+              leading: const Icon(Icons.account_box),
+              title: const Text("About"),
+              onTap: ()
+              {
+                navigateTo(context, const AboutApp());
+              },
             ),
             ListTile(
-              leading: Icon(Icons.grid_3x3_outlined),
-              title: Text("Products"),
-              onTap: () {},
+              leading: const Icon(Icons.grid_3x3_outlined),
+              title: const Text("Products"),
+              onTap: ()
+              {
+                navigateTo(context,  HomePage());
+              },
             ),
             ListTile(
-              leading: Icon(Icons.contact_mail),
-              title: Text("Contact"),
-              onTap: () {},
+              leading: const Icon(Icons.contact_mail),
+              title: const Text("Contact"),
+              onTap: ()
+              {
+                navigateTo(context, const Developers());
+              },
             )
           ],
         ),

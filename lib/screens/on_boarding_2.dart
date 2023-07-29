@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:iti_final_project/models/onboarding_model.dart';
-import 'package:iti_final_project/screens/login.dart';
 
+import '../models/onboarding_model.dart';
+import 'login.dart';
 class onBoarding2 extends StatefulWidget {
   const onBoarding2({Key? key}) : super(key: key);
 
